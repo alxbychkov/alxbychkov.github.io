@@ -139,7 +139,7 @@ a {
 .slider .slider-next {
   z-index: 99;
   padding: 15px;
-  background: url(/icons/arrow2.svg) no-repeat;
+  background: url(icons/arrow2.svg) no-repeat;
   background-size: cover;
   opacity: 0.5;
   width: 50px;
@@ -170,15 +170,15 @@ a {
 }
 
 .slider .slider-film .slider-item:nth-child(1) {
-  background-image: url(/images/back1.jpg);
+  background-image: url(images/back1.jpg);
 }
 
 .slider .slider-film .slider-item:nth-child(2) {
-  background-image: url(/images/back2.jpg);
+  background-image: url(images/back2.jpg);
 }
 
 .slider .slider-film .slider-item:nth-child(3) {
-  background-image: url(/images/back3.jpg);
+  background-image: url(images/back3.jpg);
 }
 
 .slider .slider-film .slider-item-info {
@@ -255,7 +255,7 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-image: url(/icons/map.gif);
+  background-image: url(icons/map.gif);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -347,7 +347,7 @@ a {
   width: 70%;
   min-height: 480px;
   margin-left: 10px;
-  background-image: url(/images/back4.png);
+  background-image: url(images/back4.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left;
