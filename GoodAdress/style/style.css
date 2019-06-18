@@ -351,10 +351,6 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left;
-  shape-outside: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
-  shape-margin: 20px;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
 }
 
 @media (max-width: 860px) {
