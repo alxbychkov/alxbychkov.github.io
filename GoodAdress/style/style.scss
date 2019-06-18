@@ -261,9 +261,6 @@ a {
       background-size: cover;
       background-repeat: no-repeat;
       background-position: left;
-      shape-outside: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
-      shape-margin: 20px;
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
       @include media(860) {
         width: 100%;
         margin-left: 0;
