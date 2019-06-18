@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $.getScript("/js/slider.js", function () {
+    $.getScript("js/slider.js", function () {
         slider(".slider");
     });
     $('.navmenu a').click(function () {
