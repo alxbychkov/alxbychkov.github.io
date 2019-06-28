@@ -6,7 +6,7 @@ function slider(element) {
   const length = $sliderItem.length;
   $sliderFilm.css("width", length * 100 + "%");
 
-  $(".next").click(function () {
+  $(".next").click(function() {
     if (index < length - 1) {
       index++;
     } else {
@@ -20,7 +20,7 @@ function slider(element) {
     );
   });
 
-  $(".previous").click(function () {
+  $(".previous").click(function() {
     if (index > 0) {
       index--;
     } else {
@@ -34,7 +34,7 @@ function slider(element) {
     );
   });
 
-  setInterval(function () {
+  setInterval(function() {
     $(".next").click();
   }, 5000);
 }

@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
   let i = 1,
     length = 5;
   let fio = $('[name = "fio"]'),
@@ -6,11 +6,11 @@ $(document).ready(function () {
     phone = $('[name = "phone"]'),
     message = $('[name = "message"]');
 
-  $("#burgerup").click(function () {
+  $("#burgerup").click(function() {
     $(".navigation-menu a").slideToggle(500);
   });
 
-  $(window).resize(function () {
+  $(window).resize(function() {
     let pictureHeight = $(".mainpicture img").height();
     let mapHeight = $(".map img").height();
     if (pictureHeight < 503) {
@@ -27,7 +27,27 @@ $(document).ready(function () {
     }
   });
 
-  $(".navigation-menu a").click(function () {
+  // $(".next").click(function() {
+  //   if (i == length) {
+  //     i = 0;
+  //   }
+  //   i++;
+  //   let picture = $(".mainpicture img");
+  //   let image = "images/back" + i + ".jpg";
+  //   picture.attr("src", image);
+  // });
+
+  // $(".previous").click(function() {
+  //   if (i == 1) {
+  //     i = length + 1;
+  //   }
+  //   i--;
+  //   let picture = $(".mainpicture img");
+  //   let image = "images/back" + i + ".jpg";
+  //   picture.attr("src", image);
+  // });
+
+  $(".navigation-menu a").click(function() {
     let idName = $(this).attr("href");
     let offset = $(idName).offset();
     $("html, body").animate(
@@ -37,7 +57,7 @@ $(document).ready(function () {
       1000
     );
   });
-  $("#button-aboutus").click(function () {
+  $("#button-aboutus").click(function() {
     $("html, body").animate(
       {
         scrollTop: $("#info").offset().top
@@ -45,7 +65,7 @@ $(document).ready(function () {
       1000
     );
   });
-  $("#button-connect").click(function () {
+  $("#button-connect").click(function() {
     $("html, body").animate(
       {
         scrollTop: $(".forms").offset().top
@@ -58,14 +78,14 @@ $(document).ready(function () {
   //  FORMS VALIDATION //
   //                   //
 
-  $("form").submit(function () {
+  $("form").submit(function(event) {
     if (
       fio.val() != "" &&
       email.val() != "" &&
       phone.val() != "" &&
       message.val() != ""
     ) {
-      // alert("Good idea!");
+      alert("Good idea!");
     } else {
       if (fio.val() == "") {
         fio.css("border-color", "red");
@@ -91,11 +111,10 @@ $(document).ready(function () {
     }
   });
 
-  $(fio).keyup(function () {
+  $(fio).keyup(function() {
     let name = fio.val();
     let firstLetter = name[0];
     let allLetter = name.slice(1);
-    // let index = fio.val().length();
     if (fio.val() == "") {
       fio.css("border-color", "red");
     } else {
@@ -104,28 +123,28 @@ $(document).ready(function () {
       fio.val(string);
     }
   });
-  $(email).keyup(function () {
+  $(email).keyup(function() {
     if (email.val() == "") {
       email.css("border-color", "red");
     } else {
       email.css("border-color", "");
     }
   });
-  $(phone).keyup(function () {
+  $(phone).keyup(function() {
     if (phone.val() == "") {
       phone.css("border-color", "red");
     } else {
       phone.css("border-color", "");
     }
   });
-  $(message).keyup(function () {
+  $(message).keyup(function() {
     if (message.val() == "") {
       message.css("border-color", "red");
     } else {
       message.css("border-color", "");
     }
   });
-  $.getScript("../js/slider.js", function () {
+  $.getScript("../js/slider.js", function() {
     slider(".slider");
   });
 });
