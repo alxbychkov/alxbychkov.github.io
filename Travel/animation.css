@@ -1,0 +1,21 @@
+@keyframes mouse-down {
+    50% {
+        top: 48px;
+    }
+    100% {
+        top: 50px;
+    }
+}
+
+@keyframes mouse-up {
+    100% {
+        top: 18px;
+        opacity: 0.2;
+    }
+}
+
+@keyframes move-light {
+    100% {
+        transform: translateX(350px) skewX(-45deg);
+    }
+}
