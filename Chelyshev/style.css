@@ -88,7 +88,7 @@ body {
 @media (max-width: 436px) {
   .head-text {
     padding-bottom: 15px;
-    padding-left: 5px;
+    padding-left: 1px;
   }
 }
 
