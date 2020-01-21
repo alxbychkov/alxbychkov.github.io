@@ -67,7 +67,7 @@ var app = new Vue({
                         if (((this.products[i].brand == this.brands[j]))) {
                             for (let x in this.categories ) {
                                 if ((this.products[i].category == this.categories[x])) {
-                                    let link = '/index.html/page.html?id=' + this.products[i].id;
+                                    let link = '/test/index.html/page.html?id=' + this.products[i].id;
                                     Object.assign(this.products[i],{ href: link});
                                     filterItems.push(this.products[i]);
                                 }
