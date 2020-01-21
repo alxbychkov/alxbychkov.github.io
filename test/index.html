@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Mini shop</title>
+</head>
+<body>
+    <section class="section" id="app">
+        <div class="container">
+            <div class="row sortby">
+                <div>
+                    <p>Brand:</p>
+                    <select name="brand" id="brands" multiple v-model="brands">
+                        <option value="0" selected>All</option>
+                        <option :value="brand" v-for="brand in uniqBrands">{{brand}}</option>
+                    </select>
+                </div>
+                <div>
+                    <p>Category:</p>
+                    <select name="category" id="categories" multiple v-model="categories">
+                        <option value="0" selected>All</option>
+                        <option :value="category" v-for="category in uniqCategories">{{category}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row items">
+                <div class="col-12 itemgroup">
+                    <p>{{ filterBy.length }} {{ output }}</p>
+                </div>
+                <div class="col-lg-4 col-md-2 col-12 itemgroup" v-for="product in filterBy" >
+                    <a :href="product.href" target="_blank" class="item" :data-id="product.id" >
+                        <div class="image"></div>
+                        <p>{{ product.category }}</p>
+                        <p>{{ product.brand }}</p>
+                        <p>{{ product.name }}</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
