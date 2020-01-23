@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector('.form input[type="submit"]').addEventListener('click', (e) => {
             e.preventDefault();
         })
-    }, 0);
+    }, 100);
 });
 window.addEventListener('scroll', () => {
     let target = this.pageYOffset;
