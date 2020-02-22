@@ -79,6 +79,7 @@ body {
   text-align: center;
 }
 .auth-form_input {
+  -webkit-appearance: none;
   border-style: solid;
   border-width: 2px;
   border-color: rgb(224, 224, 224);
