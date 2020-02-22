@@ -97,6 +97,7 @@ body {
   color: rgb(189, 189, 189);
 }
 .auth-form_button {
+  -webkit-appearance: none;
   border-radius: 4px;
   background-color: rgb(244, 67, 54);
   width: 274px;
