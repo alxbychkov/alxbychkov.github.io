@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,500,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+.__f-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  padding: 0 15px;
+  width: 100%;
+  height: 100vh;
+  background: url(png/back.png);
+  background-size: contain;
+  display: flex;
+}
+.auth {
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgb(250, 250, 250);
+  width: 337px;
+}
+
+.auth-header {
+  position: relative;
+  height: 55px;
+  background-color: rgb(3, 169, 244);
+  padding: 11px;
+}
+.auth-icon {
+  position: absolute;
+  z-index: 1;
+  top: 6px;
+}
+.__left {
+  left: 56px;
+  top: 12px;
+}
+.__right {
+  right: 20px;
+}
+.auth-icon_img {
+  vertical-align: middle;
+}
+.auth-header_title {
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  line-height: 0.833;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.auth-footer {
+  background-color: rgb(238, 238, 238);
+  height: 55px;
+}
+.auth-footer_link {
+  font-size: 14px;
+  padding: 5px 7px;
+  color: rgb(33, 33, 33);
+  text-decoration: none;
+}
+.__font-light {
+  font-weight: 300;
+}
+.auth-main {
+  padding: 30px 15px;
+}
+.auth-form-item {
+  position: relative;
+  text-align: center;
+}
+.auth-form_input {
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(224, 224, 224);
+  border-radius: 4px;
+  background-color: rgb(255, 255, 255);
+  width: 278px;
+  height: 45px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0 45px 0 10px;
+  color: rgb(189, 189, 189);
+  line-height: 1.25;
+}
+.auth-form_input::placeholder {
+  color: rgb(189, 189, 189);
+}
+.auth-form_button {
+  border-radius: 4px;
+  background-color: rgb(244, 67, 54);
+  width: 274px;
+  height: 45px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+}
+@media (max-width: 374px) {
+  .auth,
+  .auth-form_input,
+  .auth-form_button {
+    width: 100%;
+  }
+  .__right {
+    right: 5px;
+  }
+  .__left {
+    left: 33px;
+  }
+}
