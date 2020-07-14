@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UVENCO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="main">
+        <div class="main-msg">
+            <p class="msg_text">Чтобы выслать вам необходимые материалы, необходимо заполнить анкету.</p>
+            <button class="btn msg_btn">Продолжить</button>
+            <p id="result">Данные успешно отправленны</p>
+        </div>
+    </main>
+    <div class="modal_back">
+        <div class="modal">
+            <button class="close"></button>
+            <div class="modal-body">
+                <h2>Анкета</h2>
+                <form action="index.html" method="GET" class="form">
+                    <div class="form_screen">
+                        <div class="screen_item">
+                            <label class="required" for="name">Имя:</label>
+                            <input type="text" name='firstName' id='name' class="form_input" required>
+                            <input type="button" class="btn btn_next" value="Далее" disabled>
+                        </div>
+                        <div class="screen_item">
+                            <label for="surname">Фамилия:</label>
+                            <input type="text" name='surName' id='surname' class="form_input">
+                            <input type="button" class="btn btn_next" value="Далее">
+                        </div>
+                        <div class="screen_item">
+                            <label class="required" for="age">Возраст:</label>
+                            <input type="number" name='age' id='age' class="form_input" min="5" max="110" required>
+                            <input type="button" class="btn btn_next" value="Далее" disabled>
+                        </div>
+                        <div class="screen_item">
+                            <label class="required" for="email">Электронная почта:</label>
+                            <input type="email" name='email' id='email' class="form_input" required>
+                            <input type="button" class="btn btn_next" value="Далее" disabled>
+                        </div> 
+                        <div class="screen_item">
+                            <label for="gender">Пол:</label>
+                            <select name="gender" id="gender" class="form_input">
+                                <option value="male">Мужской</option>
+                                <option value="female">Женский</option>
+                            </select>
+                            <input type="button" class="btn btn_next" value="Далее">
+                        </div>          
+                        <div class="screen_item">
+                            <label for="hobby">Хобби:</label>
+                            <select multiple="multiple" id="hobby" name="hobby[]" id="hobby" class="form_input">
+                                <option value="sport">Спорт</option>
+                                <option value="culinary">Кулинария</option>
+                                <option value="fishing">Рыбалка</option>
+                                <option value="games">Видеоигры</option>
+                                <option value="books">Книги</option>
+                                <option value="other">Другое</option>
+                            </select>
+                            <input type="submit" class="btn btn_submit" value="Отправить">
+                        </div> 
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
