@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         let col = 0
 
         field.innerHTML = ``
-    
+        field.style.height = `${imageSize+2}px`
         for (let i=0; i<rows; i++) {
             var a = []
             for (let j=0; j<rows; j++) {
