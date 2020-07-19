@@ -210,7 +210,6 @@ document.addEventListener('click',e=>{
                 memory.push(mData)
             })
             swap(item,empty)
-            window.history.pushState(memory,'',tableArr.indexOf(item))
             memory = []
         } else {
             if (item.className == 'field-item' ) {
@@ -224,12 +223,6 @@ document.addEventListener('click',e=>{
 
 })
 
-window.addEventListener ("popstate", function (e) {
-    console.log(window.history.state)
-    if (window.history.state != null) {
-        renderFromHistory(window.history.state)
-    }
-});
 
 function animate(item) {
     let start = Date.now(); // запомнить время начала
