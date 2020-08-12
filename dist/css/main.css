@@ -542,6 +542,7 @@ h1.h1 span:nth-of-type(3) {
 
 .advantages .advantages-block .advantages-buttons .rect-btn::after {
   content: url(../img/arrow_4.svg);
+  opacity: 1;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
