@@ -15,6 +15,33 @@ document.querySelector(".first-screen .navigation").addEventListener('wheel', fu
     event.preventDefault();
   }
 });
+document.addEventListener('DOMContentLoaded', function () {
+  var objs = document.querySelector('.first-screen');
+  showObj(objs, 2000);
+});
+
+function showObj(name, time) {
+  var elements = name.querySelectorAll('.obj');
+  setTimeout(function () {
+    elements.forEach(function (obj) {
+      obj.classList.add('show');
+    });
+  }, time);
+}
+
+document.addEventListener('scroll', function (e) {
+  var portfolio = document.querySelector('.portfolio');
+  var advantages = document.querySelector('.advantages');
+  var scroll = document.documentElement.scrollTop + window.innerHeight;
+
+  if (scroll > portfolio.offsetTop) {
+    showObj(portfolio, 600);
+  }
+
+  if (scroll > advantages.offsetTop) {
+    showObj(advantages, 2000);
+  }
+});
 
 function testWebP(callback) {
   var webP = new Image();
