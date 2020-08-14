@@ -155,36 +155,72 @@ a {
   transition: .5s;
 }
 
+.preloader svg {
+  margin-top: 25px;
+}
+
 .preloader .preloader_back {
-  left: 0;
-  top: 0;
   width: 10%;
   height: 100vh;
   background: #3139F3;
+  overflow: hidden;
 }
 
 .preloader .preloader_back .preloader_percentage.white {
-  color: #FFFFFF;
+  color: #ffffff;
   z-index: 1;
-}
-
-.preloader .preloader_percentage {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-family: Igra Sans;
   font-style: normal;
   font-weight: normal;
   font-size: 150px;
   line-height: 192px;
   letter-spacing: -0.03em;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
 }
 
-.preloader .preloader_percentage::before {
-  content: url(../img/arrow_1.svg);
+.preloader .preloader_back .preloader_percentage.white::before {
+  width: 89px;
+  height: 89px;
+  position: absolute;
+  top: 38%;
+  left: 22%;
+}
+
+.preloader > .preloader_percentage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: Igra Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 150px;
+  line-height: 192px;
+  letter-spacing: -0.03em;
+  z-index: -1;
+}
+
+.preloader > .preloader_percentage::before {
   width: 89px;
   height: 89px;
   position: absolute;
@@ -194,6 +230,10 @@ a {
 
 .preloader .preloader_percentage.blue {
   color: #3139F3;
+}
+
+.preloader .perc {
+  margin-left: 79px;
 }
 
 .preloader.done {
@@ -229,29 +269,20 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 35px 40px;
+  padding: 35px 0;
   margin: 0;
 }
 
 .logo,
 .header-contacts {
   width: 25%;
-}
-
-.logo {
-  -webkit-animation: showleft 2s linear;
-          animation: showleft 2s linear;
-}
-
-.header-contacts {
-  -webkit-animation: showright 2s linear;
-          animation: showright 2s linear;
+  padding-left: 12px;
 }
 
 .header .navigation {
-  width: 50%;
-  -webkit-animation: show 2s linear;
-          animation: show 2s linear;
+  width: 37%;
+  padding: 0px 13px 0 30px;
+  margin-bottom: 6px;
 }
 
 .nav-menu {
@@ -261,14 +292,22 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   list-style: none;
 }
 
 .nav-menu_item {
   padding: 10px 15px;
+}
+
+.nav-menu_item:first-of-type {
+  padding-left: 0;
+}
+
+.nav-menu_item:last-of-type {
+  padding-right: 0;
 }
 
 .header-contacts {
@@ -294,7 +333,7 @@ a {
 }
 
 .contacts_item:first-of-type {
-  margin-right: 15px;
+  margin-right: 23px;
 }
 
 .contacts_link {
@@ -314,12 +353,12 @@ a {
 
 .first-screen {
   background-color: #EBEBEB;
-  padding: 213px 0 60px;
+  padding: 199px 0 60px;
   overflow: hidden;
 }
 
 .wrapper {
-  max-width: 1200px;
+  max-width: 1299px;
   margin: 0 auto;
   position: relative;
   z-index: 2;
@@ -332,13 +371,13 @@ a {
 
 .first_title .circle {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 57%;
+  left: 54%;
   width: 225px;
   height: 225px;
   border-radius: 50%;
   background-color: #3139F3;
-  margin: 25px;
+  margin: 3px 0 0 3px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -375,6 +414,7 @@ a {
   font-weight: 500;
   color: #ffffff;
   text-align: center;
+  margin-bottom: 16px;
 }
 
 .first_title .circle p span {
@@ -419,9 +459,8 @@ h1.h1 span:nth-of-type(3) {
 
 .first-block {
   width: 25%;
-  padding: 10px 0 10px 15px;
-  -webkit-animation: show 2s linear;
-          animation: show 2s linear;
+  padding: 0px 0 10px 17px;
+  margin-top: -15px;
   overflow: hidden;
 }
 
@@ -440,7 +479,7 @@ h1.h1 span:nth-of-type(3) {
 }
 
 .first-block .block_pagination {
-  margin: 35px 0 110px;
+  margin: 37px 0 108px;
   height: 1px;
   border-top: 1px solid #000000;
   width: 92%;
@@ -479,15 +518,15 @@ h1.h1 span:nth-of-type(3) {
 }
 
 .first-screen .navigation {
-  width: 50%;
-  margin-left: 50%;
+  width: 48%;
+  margin-left: 52%;
+  padding-left: 5px;
+  margin-top: -9px;
   overflow-y: auto;
   position: relative;
   z-index: 2;
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;
-  -webkit-animation: showbottom 2s linear;
-          animation: showbottom 2s linear;
 }
 
 .first-screen .navigation::-webkit-scrollbar {
@@ -509,7 +548,7 @@ h1.h1 span:nth-of-type(3) {
 }
 
 .menu_item {
-  padding: 10px 15px;
+  padding: 0px 15px;
 }
 
 .menu_link {
@@ -529,9 +568,7 @@ h1.h1 span:nth-of-type(3) {
           transform: rotate(90deg);
   position: absolute;
   top: 300px;
-  left: -100px;
-  -webkit-animation: spin 6s linear;
-          animation: spin 6s linear;
+  left: -94px;
 }
 
 .first-screen .obj_circle_big {
@@ -543,27 +580,23 @@ h1.h1 span:nth-of-type(3) {
       -ms-transform: rotate(90deg);
           transform: rotate(90deg);
   position: absolute;
-  right: -180px;
-  top: 500px;
-  -webkit-animation: spin 6s linear;
-          animation: spin 6s linear;
+  right: -176px;
+  top: 457px;
 }
 
 .first-screen .obj_half {
   position: absolute;
-  right: 240px;
-  top: -595px;
+  right: 199px;
+  top: -574px;
   width: 903px;
   height: 903px;
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
   border-radius: 50%;
-  border: 70px solid transparent;
-  border-top: 70px solid #ffffff;
-  border-right: 70px solid #ffffff;
-  -webkit-animation: spin2 6s linear;
-          animation: spin2 6s linear;
+  border: 122px solid transparent;
+  border-top: 122px solid #ffffff;
+  border-right: 122px solid #ffffff;
 }
 
 .first-screen .obj_rect {
@@ -578,8 +611,6 @@ h1.h1 span:nth-of-type(3) {
   -webkit-transform: rotate(150deg);
       -ms-transform: rotate(150deg);
           transform: rotate(150deg);
-  -webkit-animation: grow 6s linear;
-          animation: grow 6s linear;
 }
 
 .obj {
@@ -591,7 +622,7 @@ h1.h1 span:nth-of-type(3) {
 }
 
 .advantages {
-  padding: 165px 15px 140px;
+  padding: 152px 3px 140px;
   max-width: 1920px;
   margin: 0 auto;
   width: 100%;
@@ -639,7 +670,7 @@ h1.h1 span:nth-of-type(3) {
 .advantages .advantages-block {
   width: 50%;
   margin-left: 50%;
-  padding-right: 64px;
+  padding-right: 133px;
   position: relative;
 }
 
@@ -668,6 +699,7 @@ h1.h1 span:nth-of-type(3) {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 16px;
 }
 
 .advantages .advantages-block .advantages-buttons a {
@@ -745,17 +777,17 @@ h1.h1 span:nth-of-type(3) {
 
 .advantages .obj_half {
   position: absolute;
-  right: 30%;
-  top: -100px;
-  width: 200px;
-  height: 200px;
+  right: 25%;
+  top: -143px;
+  width: 288px;
+  height: 288px;
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
   border-radius: 50%;
-  border: 50px solid transparent;
-  border-top: 50px solid #3139F3;
-  border-right: 50px solid #3139F3;
+  border: 70px solid transparent;
+  border-top: 70px solid #3139F3;
+  border-right: 70px solid #3139F3;
   -webkit-animation: spin2 6s linear;
           animation: spin2 6s linear;
 }
