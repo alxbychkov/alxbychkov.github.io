@@ -142,6 +142,65 @@ a {
   color: #3139F3;
 }
 
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffffff;
+  z-index: 100;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+}
+
+.preloader .preloader_back {
+  left: 0;
+  top: 0;
+  width: 10%;
+  height: 100vh;
+  background: #3139F3;
+}
+
+.preloader .preloader_back .preloader_percentage.white {
+  color: #FFFFFF;
+  z-index: 1;
+}
+
+.preloader .preloader_percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: Igra Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 150px;
+  line-height: 192px;
+  letter-spacing: -0.03em;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.preloader .preloader_percentage::before {
+  content: url(../img/arrow_1.svg);
+  width: 89px;
+  height: 89px;
+  position: absolute;
+  top: -22px;
+  left: -180px;
+}
+
+.preloader .preloader_percentage.blue {
+  color: #3139F3;
+}
+
+.preloader.done {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .header {
   font-family: 'Gotham Pro',sans-serif;
   font-style: normal;
@@ -262,6 +321,8 @@ a {
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 .first_title {
@@ -421,6 +482,8 @@ h1.h1 span:nth-of-type(3) {
   width: 50%;
   margin-left: 50%;
   overflow-y: auto;
+  position: relative;
+  z-index: 2;
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;
   -webkit-animation: showbottom 2s linear;
@@ -505,8 +568,8 @@ h1.h1 span:nth-of-type(3) {
 
 .first-screen .obj_rect {
   position: absolute;
-  bottom: 100px;
-  left: 480px;
+  bottom: -5%;
+  left: 20%;
   border-bottom: 70px solid #ffffff;
   border-left: 40px solid transparent;
   border-right: 25px solid transparent;
@@ -682,7 +745,7 @@ h1.h1 span:nth-of-type(3) {
 
 .advantages .obj_half {
   position: absolute;
-  right: 550px;
+  right: 30%;
   top: -100px;
   width: 200px;
   height: 200px;
