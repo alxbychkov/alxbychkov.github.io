@@ -276,12 +276,11 @@ a {
 .logo,
 .header-contacts {
   width: 25%;
-  padding-left: 12px;
 }
 
 .header .navigation {
   width: 37%;
-  padding: 0px 13px 0 30px;
+  padding: 0px 6px 0 10px;
   margin-bottom: 6px;
 }
 
@@ -307,7 +306,23 @@ a {
 }
 
 .nav-menu_item:last-of-type {
-  padding-right: 0;
+  padding-right: 22px;
+}
+
+.nav-menu_item .nav-menu_link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  display: block;
+  min-width: 94px;
+  text-align: center;
+  -webkit-transition: .1s;
+  -o-transition: .1s;
+  transition: .1s;
+}
+
+.nav-menu_item .nav-menu_link:hover {
+  font-weight: 500;
 }
 
 .header-contacts {
@@ -353,8 +368,34 @@ a {
 
 .first-screen {
   background-color: #EBEBEB;
-  padding: 199px 0 0px;
+  padding: 199px 0 59px;
   overflow: hidden;
+  position: relative;
+}
+
+.first-screen_lines {
+  max-width: 1846px;
+  margin: 0 auto;
+  border: 1px solid #A6A6A6;
+  border-top: none;
+  border-bottom: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: .2;
+}
+
+.first-screen_lines .lines {
+  width: calc(100% / 6);
+}
+
+.first-screen_lines .lines:not(:last-of-type) {
+  border-right: 1px solid #A6A6A6;
 }
 
 .wrapper {
@@ -366,7 +407,7 @@ a {
 
 .first_title {
   position: relative;
-  padding: 0 15px;
+  padding: 0 32px;
 }
 
 .first_title .circle {
@@ -444,7 +485,6 @@ h1.h1 span {
 }
 
 h1.h1 span:nth-of-type(2) {
-  color: #3139F3;
   width: 75%;
   margin-left: 25%;
   text-align: start;
@@ -459,7 +499,7 @@ h1.h1 span:nth-of-type(3) {
 
 .first-block {
   width: 25%;
-  padding: 0px 0 10px 17px;
+  padding: 0px 0 10px 35px;
   margin-top: -15px;
   overflow: hidden;
 }
@@ -586,7 +626,7 @@ h1.h1 span:nth-of-type(3) {
 
 .first-screen .obj_half {
   position: absolute;
-  right: 199px;
+  right: 192px;
   top: -574px;
   width: 903px;
   height: 903px;
@@ -601,10 +641,10 @@ h1.h1 span:nth-of-type(3) {
 
 .first-screen .obj_rect {
   position: absolute;
-  bottom: -5%;
-  left: 20%;
-  border-bottom: 70px solid #ffffff;
-  border-left: 40px solid transparent;
+  bottom: 0%;
+  left: calc(26% + 10px);
+  border-bottom: 85px solid #ffffff;
+  border-left: 48px solid transparent;
   border-right: 25px solid transparent;
   height: 0;
   width: 500px;
@@ -619,6 +659,95 @@ h1.h1 span:nth-of-type(3) {
 
 .obj.show {
   display: block;
+}
+
+.viewport {
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.viewport span {
+  display: inline-block;
+  -webkit-animation: scroll 20s infinite linear;
+          animation: scroll 20s infinite linear;
+  color: #3139F3;
+}
+
+.viewport span:last-of-type {
+  padding-left: 0;
+  -webkit-animation: scroll2 20s infinite linear;
+          animation: scroll2 20s infinite linear;
+  color: red;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+
+  100% {
+    -webkit-transform: translate(-100%, 0);
+            transform: translate(-100%, 0);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+
+  100% {
+    -webkit-transform: translate(-100%, 0);
+            transform: translate(-100%, 0);
+  }
+}
+
+@-webkit-keyframes scroll2 {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+
+  100% {
+    -webkit-transform: translate(-100%, 0);
+            transform: translate(-100%, 0);
+  }
+}
+
+@keyframes scroll2 {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+
+  100% {
+    -webkit-transform: translate(-100%, 0);
+            transform: translate(-100%, 0);
+  }
+}
+
+@-webkit-keyframes anim1 {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -250px 0;
+  }
+}
+
+@keyframes anim1 {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -250px 0;
+  }
 }
 
 .advantages {
@@ -653,6 +782,27 @@ h1.h1 span:nth-of-type(3) {
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+
+.advantages .flight {
+  position: absolute;
+  top: 57px;
+  left: 40px;
+  width: 70px;
+  height: 70px;
+  background: #3139F3 url(../img/arrow_2.svg);
+  border-radius: 50%;
+  background-position: 55% 45%;
+  background-repeat: no-repeat;
+  -webkit-transition: .7s;
+  -o-transition: .7s;
+  transition: .7s;
+}
+
+.advantages .flight:hover {
+  -webkit-transform: rotate(-360deg);
+      -ms-transform: rotate(-360deg);
+          transform: rotate(-360deg);
 }
 
 .advantages .h2 {
