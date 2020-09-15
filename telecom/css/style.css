@@ -170,7 +170,7 @@ section.body {
 }
 @media screen and (max-width: 415px) {
     section.body {
-        padding-bottom: 10px;
+        padding-bottom: 20px;
     }
 
     .footer {
