@@ -168,6 +168,15 @@ section.body {
         font-size: 40px;
     }
 }
+@media screen and (max-width: 415px) {
+    section.body {
+        padding-bottom: 10px;
+    }
+
+    .footer {
+        padding: 0 2px 5px;
+    }
+}
 @media screen and (max-width: 561px) {
     .nav__img {
         width: 30px;
