@@ -187,7 +187,7 @@ section.body {
         margin-right: 10px;
     }
     section.body {
-        padding-bottom: 20px;
+        padding-bottom: 10px;
     }
     .body__header {
         font-size: 19px;
@@ -216,7 +216,7 @@ section.body {
         padding: 30px 0;
     }
     .footer {
-        padding: 0 2px 10px;
+        padding: 0 2px 5px;
     }
     .footer__text {
         font-size: 11px;
