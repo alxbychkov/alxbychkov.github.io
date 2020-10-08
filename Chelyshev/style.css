@@ -210,6 +210,11 @@ body {
 .instagram_gallery {
     margin: 0 -1%;
 }
+
+.instagram_gallery img {
+    width: 32%;
+}
+
 .footer {
   background: #5e474d;
 }
