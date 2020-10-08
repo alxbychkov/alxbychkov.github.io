@@ -212,7 +212,7 @@ body {
 }
 
 .instagram_gallery img {
-    width: 32%;
+    width: 32% !important;
 }
 
 .footer {
