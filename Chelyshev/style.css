@@ -107,6 +107,11 @@ body {
     font-size: 28px;
   }
 }
+@media (max-width: 355px) {
+  .head-text h1 {
+    font-size: 25px;
+  }
+}
 
 .about {
   display: -webkit-box;
