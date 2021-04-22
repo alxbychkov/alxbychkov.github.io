@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+path {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: dash 2s linear;
+  animation-fill-mode: forwards;
+ 
+}
+
+#path2 {
+  animation-delay: 1s;
+}
+
+#path3 {
+  animation-delay: 3s;
+}
+
+#path4 {
+  animation-delay: 4s;
+}
+
+#path5 {
+  animation-delay: 5.8s;
+}
+
+#path6 {
+  animation-delay: 2s;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 2000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+</style>
+<body>
+    <svg width="361" height="80" viewBox="0 0 361 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path id="path1" d="M198 2C52.5804 6.5912 -2.37292 26.5 2.69308 43.566C8.68977 63.7673 70.4695 78 167.021 78C263.573 78 350.95 65.9519 358.5 43.566C358.5 27.1794 272.575 14.2631 175 17" stroke="#FCAF17" stroke-width="4"/>
+        </svg>
+</body>
+</html>
